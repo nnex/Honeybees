@@ -1,0 +1,22 @@
+<div class='content_wrapper'>
+<h1>Honeybees</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Furry?</th>
+			<th>Modify</th>
+		</tr>
+		<% @honeybees.each do |sb| %>
+		<tr>
+			<td><%= sb.name %></td>
+			<td><%= sb.age.to_i %></td>
+			<td><%= sb.furry %></td>
+			<td>Edit</td>
+			<td>Destroy</td>
+		</tr>
+		<% end %>
+</table>
+
+<%= render "honeybees/form" %>
